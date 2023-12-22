@@ -3,6 +3,7 @@ package com.epam.mjc.nio;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 
 public class FileReader {
@@ -31,12 +32,13 @@ public class FileReader {
                         case "Phone":
                             profile.setPhone(Long.parseLong(value));
                             break;
-
+                        default:
+                            break;
                     }
                 }
             }
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+           Logger.getLogger(e.getMessage());
         }
 
 
